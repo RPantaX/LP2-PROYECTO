@@ -1,0 +1,62 @@
+package com.panda.demo.modelo;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "trabajadores")
+
+
+public class Trabajadores {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
+	@Column(name="trabajador_id")
+	private int idtrab;
+	
+	@Column(name="nombres")
+	private String nombretrab;
+	
+	@Column(name="apellidos")
+	private String apetrab;
+	
+    @Column(name="num_identidad")
+    private String numident;
+    
+    @Column(name="fecha_nacimiento")
+    private String fechanacido;
+    
+    @Column (name="id_genero")
+    private int idgen;
+    
+    @Column (name="estado_civil_id")
+    private int idestado;
+    
+    @Column (name="nacionalidad_id")
+    private int nacionalidad;
+    
+    @Column (name="direccion_residencia", length = 255)
+    private String direcres;
+    
+    @Column (name="telefono")
+    private String cel;
+    
+    @Column (name="email")
+    private String correo;
+    
+    @Column (name="cargo_id")
+    private int cargo;
+    
+    @Column (name="fecha_ingreso")
+    private String fecingre;
+    
+    @Column (name="num_cuenta_bancaria")
+    private String numbanco;
+    
+    @Column (name="estado")
+    private String est;
+}
