@@ -1,9 +1,9 @@
-package com.panda.demo.guiasTransportista.modelos;
+package com.panda.demo.facturas.modelos;
+
+import com.panda.demo.guiasTransportista.modelos.Remitentes;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -11,11 +11,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "remitentes")
+@Table(name = "clientes")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Remitentes {
+public class Cliente {
+	
 	@Id
     @Column(name = "ruc", nullable = false)
     private String ruc;
@@ -25,4 +26,5 @@ public class Remitentes {
 	
 	@Column(name = "direccion", nullable = false)
 	private String direccion;
+
 }

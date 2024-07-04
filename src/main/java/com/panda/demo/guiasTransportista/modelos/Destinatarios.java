@@ -17,7 +17,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Destinatarios {
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ruc", nullable = false)
     private String ruc;
 	
