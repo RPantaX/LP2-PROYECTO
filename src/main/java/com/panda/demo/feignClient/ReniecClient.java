@@ -12,5 +12,5 @@ public interface ReniecClient {
 	@GetMapping("/dni")
     ReniecResponse getInfo(@RequestParam("numero") String numero,
                            @RequestHeader("Authorization") String token);
-	
+	//esdsdf
 }
