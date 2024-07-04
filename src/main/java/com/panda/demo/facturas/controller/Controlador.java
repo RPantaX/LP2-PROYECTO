@@ -24,7 +24,7 @@ public class Controlador {
 	public String listar(Model model) {
 		List<Factura> facturas = facturaService.listar();
 		model.addAttribute("facturas", facturas);
-		return "from";
+		return "index";
 	}
 	@GetMapping("/nueva-factura")
 	public String agregar(Model model) {
