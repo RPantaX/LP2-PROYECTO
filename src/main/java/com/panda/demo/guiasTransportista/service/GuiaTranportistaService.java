@@ -30,8 +30,8 @@ public class GuiaTranportistaService implements IGuiasTransportistaService{
 	private IRemitentes remitentesData;
 	@Autowired
 	private IDestinatarios destinatariosData;
-	
-	private final SunatClient sunatClient =null;;
+	@Autowired
+	private SunatClient sunatClient;
     @Value("${token.api}")
     private String tokenApi;
 	@Override

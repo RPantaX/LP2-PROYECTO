@@ -1,5 +1,7 @@
 package com.panda.demo.conductores_camiones.modelos;
 
+import com.panda.demo.trabajador.modelos.Trabajador;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,6 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,12 +27,10 @@ public class conductoresCamion {
     private Integer id;
 
     //cambiar por ManyToOne (tabla trabajador)
-    @Column(name = "trabajador_id", nullable = false, unique = true)
-    private Integer trabajadorId;
-
-    @ManyToOne
-    @JoinColumn(name = "tipo_licencia_id")
-    private tipoLicencia tipoLicencia;
+    @OneToOne(mappedBy = "trabajador_id")
+    private Trabajador trabajador;
+    @Column(name = "tipo_licencia")
+    private String tipoLicencia;
 
     @ManyToOne
     @JoinColumn(name = "camion_id")
